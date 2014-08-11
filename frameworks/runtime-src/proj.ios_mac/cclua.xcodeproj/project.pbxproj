@@ -51,6 +51,7 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		57F9246C19946E8E003FF509 /* libluabindings iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C03781B618BF654500FE4F13 /* libluabindings iOS.a */; };
 		C03781B918BF655400FE4F13 /* res in Resources */ = {isa = PBXBuildFile; fileRef = C03781B718BF655400FE4F13 /* res */; };
 		C03781BA18BF655400FE4F13 /* res in Resources */ = {isa = PBXBuildFile; fileRef = C03781B718BF655400FE4F13 /* res */; };
 		C03781BB18BF655400FE4F13 /* src in Resources */ = {isa = PBXBuildFile; fileRef = C03781B818BF655400FE4F13 /* src */; };
@@ -202,12 +203,12 @@
 			remoteGlobalIDString = 57E468F51994693D001B2A6E;
 			remoteInfo = "luajitbindings iOS";
 		};
-		57F9246219946A34003FF509 /* PBXContainerItemProxy */ = {
+		57F9246A19946E81003FF509 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 57E4687D1994693D001B2A6E;
-			remoteInfo = "luajitbindings iOS";
+			remoteGlobalIDString = 1A119716178526AA00D62A44;
+			remoteInfo = "luabindings iOS";
 		};
 		C03781B318BF654500FE4F13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -404,6 +405,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F9246C19946E8E003FF509 /* libluabindings iOS.a in Frameworks */,
 				15AECE29195D482800907DB0 /* MediaPlayer.framework in Frameworks */,
 				15A8A4441834C43700142BE0 /* libchipmunk iOS.a in Frameworks */,
 				15A8A4451834C43700142BE0 /* libcocos2dx iOS.a in Frameworks */,
@@ -636,7 +638,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				57F9246319946A34003FF509 /* PBXTargetDependency */,
+				57F9246B19946E81003FF509 /* PBXTargetDependency */,
 				C0A2F0431897600E0072A7AB /* PBXTargetDependency */,
 				C0A2F0451897600E0072A7AB /* PBXTargetDependency */,
 				C0A2F0471897600E0072A7AB /* PBXTargetDependency */,
@@ -931,10 +933,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		57F9246319946A34003FF509 /* PBXTargetDependency */ = {
+		57F9246B19946E81003FF509 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "luajitbindings iOS";
-			targetProxy = 57F9246219946A34003FF509 /* PBXContainerItemProxy */;
+			name = "luabindings iOS";
+			targetProxy = 57F9246A19946E81003FF509 /* PBXContainerItemProxy */;
 		};
 		C03781F418BF659D00FE4F13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1012,6 +1014,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-image_base",
 					100000000,
@@ -1038,6 +1041,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-image_base",
 					100000000,
@@ -1071,7 +1075,7 @@
 				HEADER_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../cocos2d-x-3.0-lua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/base $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/physics $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/math/kazmath $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/2d $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/ui $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/network $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/audio/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/editor-support $(SRCROOT)/../../../../cocos2d-x-3.0-lua/extensions $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/chipmunk/include/chipmunk $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/luajit/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/tolua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/auto";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../cocos2d-x-3.0-lua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/base $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/physics $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/math/kazmath $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/2d $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/ui $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/network $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/audio/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/editor-support $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/chipmunk/include/chipmunk $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/luajit/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/tolua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-extensions $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/auto";
 			};
 			name = Debug;
 		};
@@ -1092,7 +1096,7 @@
 				HEADER_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../cocos2d-x-3.0-lua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/base $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/physics $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/math/kazmath $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/2d $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/ui $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/network $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/audio/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/editor-support $(SRCROOT)/../../../../cocos2d-x-3.0-lua/extensions $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/chipmunk/include/chipmunk $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/luajit/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/tolua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/auto";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../../cocos2d-x-3.0-lua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/base $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/physics $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/math/kazmath $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/2d $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/ui $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/network $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/audio/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/editor-support $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/chipmunk/include/chipmunk $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/luajit/include $(SRCROOT)/../../../../cocos2d-x-3.0-lua/external/lua/tolua $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-extensions $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../../cocos2d-x-3.0-lua/cocos/scripting/lua-bindings/auto";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
