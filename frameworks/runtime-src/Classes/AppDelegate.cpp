@@ -19,6 +19,20 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
+    
+    Director* director=Director::getInstance();
+    GLView* glView=GLView::createWithRect("Main", Rect(0, 0, 960, 640));
+    director->setOpenGLView(glView);
+    
+    glView->setDesignResolutionSize(480, 320, ResolutionPolicy::NO_BORDER);
+    
+    director->setDisplayStats(true);
+    
+    director->setAnimationInterval(1.0f/60.0f);
+    
+    FileUtils::getInstance()->addSearchPath("src");
+    FileUtils::getInstance()->addSearchPath("res");
+    
     auto engine = LuaEngine::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     if (engine->executeScriptFile("src/main.lua")) {
