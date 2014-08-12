@@ -21,10 +21,13 @@ bool AppDelegate::applicationDidFinishLaunching()
 {
     
     Director* director=Director::getInstance();
-    GLView* glView=GLView::createWithRect("Main", Rect(0, 0, 960, 640));
-    director->setOpenGLView(glView);
+    GLView* glView=director->getOpenGLView();
+    if (!glView) {
+        glView=GLView::create("CCLUA");
+        director->setOpenGLView(glView);
+    }
     
-    glView->setDesignResolutionSize(480, 320, ResolutionPolicy::NO_BORDER);
+//    glView->setDesignResolutionSize(480, 320, ResolutionPolicy::NO_BORDER);
     
     director->setDisplayStats(true);
     
